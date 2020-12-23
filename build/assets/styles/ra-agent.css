@@ -93,7 +93,7 @@
     padding-left: 70px;
 }
 .main-screen__col .title{
-    margin-top: 19.5%;
+    margin-top: 15vh;
     margin-bottom: 24px;
 }
 .main-screen__col .title + p{
@@ -214,13 +214,39 @@ html>body.agents>main>div.agents__fix>form.form{
     html>body.agents>header>div>a.account{
         margin-right: 8px;
     }
+    .main-screen__col:first-child{
+        flex: 0 0 43%;
+        background-position: right center;
+    }
+    .main-screen__col:first-child .title{
+        margin-top: 0;
+    }
+    .main-screen__col:last-child{
+        box-sizing: border-box;
+        flex: 0 0 57%;
+        padding-left: 55px;
+    }
 }
 @media screen and (max-width: 975px){
     html>body>main>div>div.expanding-text.expanding-doc-uploader>ul>li>form>ul.fields.mob-padding{
         padding-top: 44px;
     }
+    .main-screen__col:first-child{
+        display: none;
+    }
+    .main-screen__col:last-child{
+        display: block;
+        flex: 0 0 100%
+    }
+    .agents__fix{
+        padding: 20px;
+    }
 }
 @media screen and (max-width: 767px){
+    .title{
+        font-size: 30px;
+        line-height: 34px;
+    }
     .agents__footer{
         height: auto;
         flex-direction: column;
@@ -229,5 +255,15 @@ html>body.agents>main>div.agents__fix>form.form{
     }
     .agents-footer__item:not(:last-child){
         margin-bottom: 10px;
+    }
+    .main-screen__col:last-child{
+        padding: 0 20px;
+    }
+    .main-screen__form{
+        width: 100%;
+    }
+    .main-screen-btns__link{
+        margin-left: 15px;
+        font-size: 16px;
     }
 }
