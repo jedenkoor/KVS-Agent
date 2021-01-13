@@ -342,6 +342,65 @@ p.subtitle:not(:last-child){
     line-height: 45px;
     color: #FF8635;
 }
+.lkdata__edit{
+    padding: 18px 40px;
+    border: 1px solid #CFD0D1;
+    border-radius: 4px;
+    font-weight: bold;
+    color: #232930;
+    transition: background-color 170ms linear;
+}
+.lkdata__edit:hover,
+.lkdata__edit:focus{
+    background: #f4f5f6;
+}
+.lkdata .btn-orange{
+    padding: 14px 40px!important;
+}
+.lkdata__contract{
+    width: 100%;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    border: 1px solid #DCDFE1;
+    border-radius: 3px;
+    padding: 0 23px;
+    box-sizing: border-box;
+}
+.lkdata__contract svg{
+    margin-right: 17px;
+    flex-shrink: 0;
+}
+.lkdata-contract__btn{
+    padding: 4px 12px;
+    margin-left: auto;
+    border: 1px solid #C4C4C4;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #292F36;
+}
+.lkdata-contract__btn:hover,
+.lkdata-contract__btn:focus{
+    background: #f4f5f6;
+}
+.notices__list{
+    margin-top: -25px;
+}
+.notices__item{
+    padding: 25px 40px 25px 0;
+    display: flex;
+    flex-wrap: wrap;
+    border-bottom: 1px solid #898b8d;
+}
+.notices-item__info{
+    font-size: 12px;
+    margin-right: 30px;
+    margin-bottom: 10px;
+}
+.notices-item__text{
+    width: 100%;
+    line-height: 20px;
+}
 
 
 html>body.agents>header>div>a.phone-call{
@@ -443,6 +502,13 @@ html>body.agents>main.deals>div>form.form.agents__filterclients li:nth-child(5){
 ul.fields>li div.range-one>div.input>span.input>input, 
 ul.fields>li div.range>ul.inputs>li>span.input>input{
     font-variant-numeric: initial;
+}
+html>body>main.lkdata>div>form.form{
+    padding: 0;
+    border: none;
+}
+html>body>main.lkdata>div>form.form>ul.fields>li{
+    flex: 0 0 calc(50% - 14px);
 }
 
 @media screen and (max-width: 1919px){
@@ -663,6 +729,32 @@ ul.fields>li div.range>ul.inputs>li>span.input>input{
     html>body.agents>main.deals>div>form.form.agents__filterclients li:nth-child(2),
     html>body.agents>main.deals>div>form.form.agents__filterclients li:nth-child(3){
         margin-top: 16px;
+    }
+    html>body>main.lkdata>div>form.form>ul.fields>li{
+        flex: 0 0 100%;
+    }
+    .lkdata__edit{
+        width: 100%;
+        padding: 14px 0;
+        text-align: center;
+    }
+    .lkdata__contract{
+        flex-direction: column;
+        align-items: flex-start;
+        height: auto;
+        padding: 20px;
+    }
+    .lkdata__contract svg{
+        display: none;
+    }
+    .lkdata-contract__btn{
+        width: 100%;
+        padding: 5px 0;
+        margin-top: 10px;
+        text-align: center;
+    }
+    .notices__item{
+        padding: 25px 0;
     }
 }
 @media screen and (max-width: 655px){

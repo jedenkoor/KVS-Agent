@@ -1,0 +1,21 @@
+extends ../template
+
+block variables
+  - var title = 'ЛК Календарь мероприятий'
+
+block content
+    main.components-container
+        .stream-wide
+            section.header-with-caption
+                h1 Личный кабинет
+                p.subtitle В этом разделе отображается вся информация о вашем агентстве.
+                .submenu
+                    ul
+                        li
+                            a(href="lk-data.html") Личные данные
+                        li
+                            a(href="lk-staff.html") Сотрудники
+                        li
+                            a(href="lk-notices.html") Уведомления
+                        li
+                            a.current(href="lk-events.html") Календарь мероприятий

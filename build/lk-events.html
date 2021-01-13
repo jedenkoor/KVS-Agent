@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Вход1</title>
+    <title>ЛК Календарь мероприятий</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -53,30 +53,22 @@
 </div>
 <label for="header-menu">Открыть/закрыть меню</label>
 </header>
-    <div class="main-screen">
-      <div class="main-screen__col" style="background-image: url(assets/images/main-screen.jpg)"></div>
-      <div class="main-screen__col">
-        <h1 class="title">Вход</h1>
-        <p class="text subtitle">Введите номер телефона и получите смс-код для подтверждения.</p>
-        <form class="main-screen__form form ajax-form" enctype="multipart/form-data" method="POST" action autocomplete="on" novalidate="novalidate">
-          <ul class="fields">
-            <li>
-              <input class="form-control" data-required="yes" type="text" id="phone" value="" data-type="phone" name="phone" required="" data-inputmask-mask="+7 (999) 999-9999" data-mask="+7 (999) 999-9999" data-has-mask="" inputmode="text">
-              <label for="phone">Телефон</label>
-              <ul class="messages">
-                <li class="error">Заполните поле</li>
-              </ul>
-            </li>
-            <li>
-              <button class="btn-orange" type="submit">Получить смс-код</button>
-            </li>
-          </ul>
-        </form>
-        <div class="main-screen__btns main-screen-btns">
-          <div class="main-screen-btns__text">Нет аккаунта?</div><a class="main-screen-btns__orangelink" href="reg1.html">Зарегестрироваться </a>
-        </div>
+    <main class="components-container">
+      <div class="stream-wide">
+        <section class="header-with-caption">
+          <h1>Личный кабинет</h1>
+          <p class="subtitle">В этом разделе отображается вся информация о вашем агентстве.</p>
+          <div class="submenu">
+            <ul>
+              <li><a href="lk-data.html">Личные данные</a></li>
+              <li><a href="lk-staff.html">Сотрудники</a></li>
+              <li><a href="lk-notices.html">Уведомления</a></li>
+              <li><a class="current" href="lk-events.html">Календарь мероприятий</a></li>
+            </ul>
+          </div>
+        </section>
       </div>
-    </div>
+    </main>
     <footer class="agents__footer">
       <div class="agents-footer__item">2020, Группа компаний «КВС»</div>
       <div class="agents-footer__item"> <a href="#">Политика персональных данных</a></div>
