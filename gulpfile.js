@@ -34,6 +34,10 @@ const paths = {
   fonts: {
     src: 'src/fonts/**/*.*',
     dest: 'build/assets/fonts/'
+  },
+  m18images: {
+    src: 'src/m18images/**/*.*',
+    dest: 'build/styles/'
   }
 }
 
@@ -58,6 +62,12 @@ function scripts() {
 
 //fonts
 function fonts() {
+  return gulp.src(paths.m18images.src)
+    .pipe(gulp.dest(paths.m18images.dest));
+}
+
+//m18images
+function m18images() {
   return gulp.src(paths.fonts.src)
     .pipe(gulp.dest(paths.fonts.dest));
 }
@@ -104,12 +114,12 @@ exports.fonts = fonts;
 
 // просто работаем
 gulp.task('default', gulp.series(
-  gulp.parallel(styles, templates, images, scripts, fonts),
+  gulp.parallel(styles, templates, images, scripts, fonts, m18images),
   gulp.parallel(watch, server)
 ));
 
 // контрольная сборка на продакшен
 gulp.task('build', gulp.parallel(
   clean,
-  gulp.parallel(styles, templates, images, scripts, fonts)
+  gulp.parallel(styles, templates, images, scripts, fonts, m18images)
 ));

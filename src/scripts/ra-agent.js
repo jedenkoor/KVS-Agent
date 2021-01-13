@@ -29,8 +29,8 @@
     }
 
     window.addEventListener('resize', function(e){
-        if(document.querySelector('.agents-stafflist__info')){
-            document.querySelector('.agents-stafflist__info').classList.remove('active');
+        if(document.querySelector('.agents-stafflist__info.active')){
+            document.querySelector('.agents-stafflist__info.active').classList.remove('active');
             document.querySelector('.agents-stafflist__col.active').classList.remove('active');
         }
     });

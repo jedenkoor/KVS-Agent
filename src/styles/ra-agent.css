@@ -61,7 +61,19 @@
 }
 
 
-
+.account-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 72px;
+    margin-right: 20px;
+    text-align: right;
+    color: #fff;
+}
+.account-info span:last-child{
+    margin-top: 5px;
+    font-size: 12px;
+}
 .agents__footer{
     height: 48px;
     align-items: center;
@@ -198,7 +210,6 @@ p.subtitle:not(:last-child){
     padding: 0 20px;
     flex-shrink: 0;
 }
-
 .agents-stafflist__col:nth-child(1){
     flex: 0 0 36%;
 }
@@ -215,7 +226,6 @@ p.subtitle:not(:last-child){
     position: relative;
     flex: 0 0 75px;
 }
-
 .clients .agents-stafflist__col:nth-child(1){
     flex: 0 0 30%;
 }
@@ -235,7 +245,24 @@ p.subtitle:not(:last-child){
     position: relative;
     flex: 0 0 75px;
 }
-
+.deals .agents-stafflist__col:nth-child(1){
+    flex: 0 0 12%;
+}
+.deals .agents-stafflist__col:nth-child(2){
+    flex: 0 0 12%;
+}
+.deals .agents-stafflist__col:nth-child(3){
+    flex: 0 0 24%;
+}
+.deals .agents-stafflist__col:nth-child(4){
+    flex: 0 0 24%;
+}
+.deals .agents-stafflist__col:nth-child(5){
+    flex: 1;
+}
+.deals .agents-stafflist__col:nth-child(6){
+    flex: 0 0 75px;
+}
 .agents-stafflist__col:last-child svg{
     cursor: pointer;
 }
@@ -288,6 +315,32 @@ p.subtitle:not(:last-child){
 .clients .subtitle{
     box-sizing: border-box;
     padding-right: 330px;
+}
+.deals__cards{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+    margin-bottom: 30px!important;
+}
+.deals__card{
+    padding: 23px 20px 20px 80px;
+    background-color: #FFFFFF;
+    background-image: url('../images/deals-card.svg');
+    background-position: 20px 25px;
+    background-repeat: no-repeat;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 3px;
+}
+.deals-card__subtitle{
+    margin-bottom: 6px;
+    font-size: 20px;
+    line-height: 25px;
+}
+.deals-card__title{
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 45px;
+    color: #FF8635;
 }
 
 
@@ -366,6 +419,31 @@ html>body.agents>main>div>form.form.agents__filterclients li:nth-child(4){
     flex: 0 0 calc(25% - 15px);
     margin-bottom: 0;
 }
+html>body.agents>main.deals>div>form.form.agents__filterclients li:nth-child(1),
+html>body.agents>main.deals>div>form.form.agents__filterclients li:nth-child(4){
+    flex: 0 0 calc(19% - 13px);
+}
+html>body.agents>main.deals>div>form.form.agents__filterclients li:nth-child(2),
+html>body.agents>main.deals>div>form.form.agents__filterclients li:nth-child(5){
+    flex: 0 0 calc(40.5% - 13px);
+}
+html>body.agents>main.deals>div>form.form.agents__filterclients li:nth-child(3),
+html>body.agents>main.deals>div>form.form.agents__filterclients li:nth-child(6){
+    flex: 0 0 calc(40.5% - 13px);
+}
+html>body.agents>main.deals>div>form.form.agents__filterclients li:nth-child(1),
+html>body.agents>main.deals>div>form.form.agents__filterclients li:nth-child(2),
+html>body.agents>main.deals>div>form.form.agents__filterclients li:nth-child(3){
+    margin-bottom: 20px;
+}
+html>body.agents>main.deals>div>form.form.agents__filterclients li:nth-child(4),
+html>body.agents>main.deals>div>form.form.agents__filterclients li:nth-child(5){
+    margin-bottom: 0;
+}
+ul.fields>li div.range-one>div.input>span.input>input, 
+ul.fields>li div.range>ul.inputs>li>span.input>input{
+    font-variant-numeric: initial;
+}
 
 @media screen and (max-width: 1919px){
     html>body.agents>header>div>a.phone-call,
@@ -374,6 +452,9 @@ html>body.agents>main>div>form.form.agents__filterclients li:nth-child(4){
     }
 }
 @media screen and (max-width: 1511px){
+    .account-info{
+        height: 64px;
+    }
     .main-screen{
         margin-top: -40px;
     }
@@ -385,6 +466,12 @@ html>body.agents>main>div>form.form.agents__filterclients li:nth-child(4){
     }
 }
 @media screen and (max-width: 1279px){
+    html>body>header>div>nav{
+        width: calc(100% - 287px);
+    }
+    .account-info{
+        height: 56px;
+    }
     html>body.agents>header>div>a.phone-call,
     html>body.agents>header>div>a.account{
         margin-right: 8px;
@@ -437,8 +524,45 @@ html>body.agents>main>div>form.form.agents__filterclients li:nth-child(4){
     html>body.agents>main>div>form.form.agents__filterclients li:nth-child(n+3){
         margin-top: 24px;
     }
+    html>body.agents>main.deals>div>form.form.agents__filterclients li:nth-child(1),
+    html>body.agents>main.deals>div>form.form.agents__filterclients li:nth-child(2),
+    html>body.agents>main.deals>div>form.form.agents__filterclients li:nth-child(3){
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    .deals__cards{
+        grid-gap: 20px;
+    }
+    .deals__card{
+        padding: 23px 10px 20px 60px;
+        background-position: 10px 25px;
+    }
+    .deals-card__subtitle{
+        font-size: 16px;
+        margin-bottom: 0;
+    }
+    .deals-card__title{
+        font-size: 30px;
+    }
 }
 @media screen and (max-width: 975px){
+    .account-info{
+        height: 64px;
+    }
+    input#header-menu:checked~header .account-info{
+        order: 4;
+        justify-content: flex-start;
+        margin: 34px 0 0px 24px;
+        color: #000;
+        text-align: left;
+    }
+    html>body>input#header-menu:checked~header>div>a.account.active>svg path{
+        fill: #fff;
+    }
+    html>body>input#header-menu:checked~header>div>a.account.active{
+        padding: 8px 4% 8px;
+        color: #fff;
+    }
     html>body>main>div>div.expanding-text.expanding-doc-uploader>ul>li>form>ul.fields.mob-padding{
         padding-top: 44px;
     }
@@ -454,6 +578,26 @@ html>body.agents>main>div>form.form.agents__filterclients li:nth-child(4){
     }
     .clients .agents__add{
         margin-top: -80px;
+    }
+    .deals__cards{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .deals__card{
+        padding: 23px 20px 20px 80px;
+        background-position: 20px 25px;
+    }
+    .deals-card__subtitle{
+        margin-bottom: 6px;
+        font-size: 20px;
+    }
+    .deals-card__title{
+        font-size: 36px;
+    }
+    html>body.agents>main.deals>div>form.form.agents__filterclients li:nth-child(n){
+        flex: 0 0 calc(50% - 10px);
+    }
+    html>body.agents>main.deals>div>form.form.agents__filterclients li:nth-child(3){
+        margin-top: 24px;
     }
 }
 @media screen and (max-width: 767px){
@@ -498,5 +642,32 @@ html>body.agents>main>div>form.form.agents__filterclients li:nth-child(4){
     html>body.agents>main>div>form.form.agents__filterstaff li:not(:last-child),
     html>body.agents>main>div>form.form.agents__filterclients li:not(:first-child){
         margin-top: 16px;
+    }
+    .clients .subtitle{
+        padding-right: 0;
+    }
+    .deals__card{
+        padding: 23px 10px 20px 60px;
+        background-position: 10px 25px;
+    }
+    .deals-card__subtitle{
+        font-size: 16px;
+        margin-bottom: 0;
+    }
+    .deals-card__title{
+        font-size: 30px;
+    }
+    html>body.agents>main.deals>div>form.form.agents__filterclients li:nth-child(n){
+        flex: 0 0 100%;
+    }
+    html>body.agents>main.deals>div>form.form.agents__filterclients li:nth-child(2),
+    html>body.agents>main.deals>div>form.form.agents__filterclients li:nth-child(3){
+        margin-top: 16px;
+    }
+}
+@media screen and (max-width: 655px){
+    input#header-menu:checked~header .account-info{
+        width: 100%;
+        margin: 0
     }
 }
