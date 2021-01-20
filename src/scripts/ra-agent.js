@@ -1,5 +1,5 @@
 (() => {
-    const staffInfoSvg = document.querySelectorAll('.agents-stafflist__col:last-child>svg');
+    const staffInfoSvg = document.querySelectorAll('.agents-stafflist__col:last-child>svg') || document.querySelectorAll('.events-timetable__col:last-child>svg');
     const infoContainer = document.querySelector('.agents-stafflist__info');
     if(staffInfoSvg){
         staffInfoSvg.forEach((item) => {

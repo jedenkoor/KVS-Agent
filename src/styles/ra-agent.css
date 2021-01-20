@@ -88,6 +88,9 @@
 .agents-footer__item a{
     color: #68717B;
 }
+.agents-footer__item a:hover{
+    color: #fff;
+}
 .main-screen{
     flex: 1;
     display: flex;
@@ -401,6 +404,161 @@ p.subtitle:not(:last-child){
     width: 100%;
     line-height: 20px;
 }
+.events__navigation{
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+.events-navigation__col{
+    display: flex;
+    align-items: center;
+}
+.events-navigation__arr{
+    padding: 1px 6px;
+    cursor: pointer;
+}
+.events-navigation__arr:hover svg path{
+    fill: #F4691B
+}
+.events-navigation__current{
+    transform: translateY(-1px);
+    margin: 0 10px;
+    font-size: 18px;
+}
+.events-navigation__item{
+    margin-left: 40px;
+    color: #000;
+}
+.events-navigation__item--active{
+    color: #F4691B;
+}
+.events-navigation__item:hover{
+    color: #F4691B
+}
+.events-navigation__item:hover svg path{
+    fill: #F4691B
+}
+.events-navigation__item svg{
+    margin-right: 6px;
+}
+.events__timetable{
+    margin-bottom: 40px;
+    padding: 20px 15px 30px 15px;
+    background: #F4F5F6;
+}
+.events-timetable__row{
+    font-size: 14px;
+}
+.events-timetable__row:not(:last-child){
+    margin-bottom: 19px;
+}
+.events-timetable__row ul{
+    display: flex;
+}
+.events-timetable__row.events-timetable__row--header{
+    margin-bottom: 25px;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.events-timetable__col{
+    padding: 0 15px;
+}
+.events-timetable__col:nth-child(1){
+    flex: 0 0 25%;
+}
+.events-timetable__col:nth-child(2){
+    flex: 0 0 6%;
+}
+.events-timetable__col:nth-child(3){
+    flex: 0 0 6%;
+}
+.events-timetable__col:nth-child(4){
+    flex: 1;
+}
+.events-timetable__col:nth-child(5){
+    position: relative;
+    flex: initial;
+}
+.events-timetable__col:nth-child(5) svg{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+.events__calendar{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-gap: 10px;
+}
+.events__calendar + .events__calendar{
+    margin-top: 40px;
+}
+.events__calendar--month{
+    grid-template-rows: 100px;
+    grid-auto-rows: 100px;
+}
+.events__calendar--week{
+    grid-template-rows: 315px;
+}
+.events-calendar__item{
+    position: relative;
+    background: #FFFFFF;
+    border: 1px solid #D0D0D0;
+}
+.events-calendar__item:before{
+    content: attr(data-day);
+    position: absolute;
+    z-index: 2;
+    top: 3px;
+    right: 5px;
+    font-size: 12px;
+    color: #000
+}
+.events-calendar__item:after{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 20px;
+    background: #E3E3E3;
+}
+.events-calendar__item--active{
+    border: 1px solid #F4691B;
+}
+.events-calendar__item--active:before{
+    color: #fff
+}
+.events-calendar__item--active:after{
+    background: #F4691B;
+}
+.events-calendar-item__list{
+    margin-top: 20px;
+    margin-right: 3px;
+    height: calc(100% - 20px);
+    overflow-y: auto;
+}
+.events-calendar-item__list::-webkit-scrollbar {
+    width: 3px;
+}
+.events-calendar-item__list::-webkit-scrollbar-button{
+    display: none;
+}
+.events-calendar-item__list::-webkit-scrollbar-thumb{
+    background: #C4C4C4;
+}
+.events-calendar-item__list::-webkit-scrollbar-track{
+    background: #ECECEC;
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 33%, rgba(236,236,236,1) 33%, rgba(236,236,236,1) 66%, rgba(255,255,255,1) 66%, rgba(255,255,255,1) 100%);
+}
+.events-calendar-item__event{
+    padding: 4px 8px;
+    font-size: 10px;
+    border-bottom: 1px solid #ECECEC;
+}
+
 
 
 html>body.agents>header>div>a.phone-call{
@@ -510,6 +668,8 @@ html>body>main.lkdata>div>form.form{
 html>body>main.lkdata>div>form.form>ul.fields>li{
     flex: 0 0 calc(50% - 14px);
 }
+
+
 
 @media screen and (max-width: 1919px){
     html>body.agents>header>div>a.phone-call,
@@ -667,6 +827,9 @@ html>body>main.lkdata>div>form.form>ul.fields>li{
     }
 }
 @media screen and (max-width: 767px){
+    html>body>header>div>nav{
+        width: 100%;
+    }
     .title{
         font-size: 30px;
         line-height: 34px;
